@@ -7,19 +7,6 @@ export interface Todo {
   description: string;
 }
 
-[
-  {
-    'id': 1,
-    'title': 'delectus aut autem',
-    'completed': false
-  },
-  {
-    'id': 2,
-    'title': 'delectus aut autem',
-    'completed': false
-  }
-]
-
 class TodoService {
 
   public getAllTodos(): Promise<Todo[]> {
