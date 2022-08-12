@@ -16,6 +16,7 @@ function App() {
 
   useEffect(() => {
     getTodos();
+    // eslint-disable-next-line
   }, []);
 
   return (
