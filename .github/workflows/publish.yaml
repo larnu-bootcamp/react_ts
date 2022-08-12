@@ -5,6 +5,7 @@ on:
     branches:
       - main
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -16,7 +17,17 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+
+  # proceso de integración CI (Continuous integration)
+  # se hace un analisis de codigo estatico (linting, eslint)
+  # pruebas unitarias 
+  # pruebas de integración 
+  # todo esto podría ser parte del CI 
+
+  # proceso de despliegue:
+  # primero se testea y luego se despliega 
+  # testing & deploy & send message to discord -> CD
+  deploy: # CD
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
